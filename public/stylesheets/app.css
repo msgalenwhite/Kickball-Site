@@ -1,0 +1,12 @@
+/* CSS goes here */
+body {
+  background: pink;
+  color: purple;
+  text-align: center;
+}
+h1 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 1.5em;
+}

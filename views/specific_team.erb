@@ -1,0 +1,5 @@
+<h3><%= @team_name %></h3>
+
+<% @players.each do |player_object| %>
+  <p><%= player_object.name %> is the <%= player_object.position %></p>
+<% end %>
