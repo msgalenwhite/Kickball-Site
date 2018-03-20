@@ -20,4 +20,13 @@ class Player
     all_players
   end
 
+  def self.position(position)
+    position_list = []
+    Player.all.each do |player_object|
+      if player_object.position == position.to_sym
+        position_list << player_object
+      end
+    end
+    position_list
+  end
 end

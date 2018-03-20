@@ -19,6 +19,18 @@ RSpec.describe Team do
     end
   end
 
+  describe ".list_positions" do
+    it "returns an array" do
+      expect(Team.list_positions).to be_a(Array)
+    end
+    it "includes a catcher" do
+      expect(Team.list_positions).to include("Catcher")
+    end
+    it "has 9 positions" do
+      expect(Team.list_positions.length).to eq(9)
+    end
+  end
+
   describe "#players" do
     it "returns an array" do
       expect(team_with_players.players).to be_a(Array)

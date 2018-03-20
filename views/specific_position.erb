@@ -1,0 +1,4 @@
+<h1><%= @position %></h1>
+<% @player_list.each do |player_object| %>
+  <h3><%= player_object.name %> (<%= player_object.team_name %>)</h3>
+<% end %>

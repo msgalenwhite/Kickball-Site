@@ -1,5 +1,5 @@
-<h3><%= @team_name %></h3>
+<h1><%= @team_name %></h1>
 
 <% @players.each do |player_object| %>
-  <p><%= player_object.name %> is the <%= player_object.position %></p>
+  <p><%= player_object.name %> (<%= player_object.position %>)</p>
 <% end %>

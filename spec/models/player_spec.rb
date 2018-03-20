@@ -23,4 +23,13 @@ RSpec.describe Player do
       expect(Player.all[0]).to be_a(Player)
     end
   end
+
+  describe ".position" do
+    it "is an array" do
+      expect(Player.position("Catcher")).to be_a(Array)
+    end
+    it "contains Player objects" do
+      expect(Player.position("Catcher")[0]).to be_a(Player)
+    end
+  end
 end

@@ -17,10 +17,21 @@ end
 
 get "/teams" do
   @teams = Team.all
-
   erb :teams
 end
 
+get "/positions/:position" do
+  @position = params[:position]
+  @player_list = Player.position(@position)
+  erb :specific_position
+end
+
+get "/positions" do
+  @positions = Team.list_positions
+  @sample = "Test"
+  erb :positions
+end
+
 get "/" do
-  "<a href='/teams'><h1>The LACKP Homepage<h1></a"
+  erb :home_page
 end
